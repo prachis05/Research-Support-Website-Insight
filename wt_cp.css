@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size:large;
+}
+
+.main {
+    width: 100%;
+background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%),
+                url('https://img.freepik.com/premium-photo/abstract-background-design-images-wallpaper-ai-generated_643360-55052.jpg') no-repeat center center;
+                
+    
+                
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.icon {
+    height: 70px;
+}
+
+.logo {
+    color: #007bff;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.menu {
+    height: 70px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    padding: 15px;
+    display: block;
+}
+
+ul li a:hover {
+    color: #007bff;
+}
+
+ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+ul li ul.dropdown li {
+    width: 100%;
+    margin: 0;
+}
+
+ul li ul.dropdown li a {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+ul li ul.dropdown li a:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    ul li {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    ul li ul.dropdown {
+        position: static;
+        margin-top: 10px;
+    }
+}
+
+/* carousel */
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0;
+    margin-top: 20px; 
+    margin-bottom: 50px; 
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+}
+
+.carousel-slide h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.carousel-slide p {
+    font-size: 1.5em;
+    color: #fff; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.7);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color:  #007bff;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.carousel {
+    animation: slide 10s infinite;
+}
+
+.carousel-container:hover .carousel {
+    animation-play-state:paused;
+}
+
+
+.content-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto; 
+}
+
+
+
+/*footer section */
+
+footer {
+    background-color:#007bff;;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+}
+
+footer .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #e6f2ff;
+}
+
+.social-icon {
+    margin-right: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
